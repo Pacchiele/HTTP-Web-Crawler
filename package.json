@@ -1,11 +1,12 @@
 {
   "name": "http-web-crawler",
   "version": "1.0.0",
+  "type": "module",
   "description": "Local application which crawls a website and returns a report of the internal linking structure of the website.",
   "main": "main.js",
   "scripts": {
     "start": "node main.js",
-    "test": "jest"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,8 @@
   "homepage": "https://github.com/Pacchiele/HTTP-Web-Crawler#readme",
   "devDependencies": {
     "jest": "^30.5.2"
+  },
+  "dependencies": {
+    "jsdom": "^30.1.2"
   }
 }
